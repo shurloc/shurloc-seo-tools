@@ -59,9 +59,12 @@ final class Shurloc_FAQ_Schema_Parser {
 		$dom = new DOMDocument();
 
 		$loaded = $dom->loadHTML(
-			'<?xml encoding="utf-8" ?>' . $content,
+			'<?xml encoding="utf-8" ?>' .
+				'<div id="shurloc-faq-content">' .
+				$content .
+				'</div>',
 			LIBXML_HTML_NOIMPLIED |
-				LIBXML_HTML_NODEFDTD
+			LIBXML_HTML_NODEFDTD
 		);
 
 		libxml_clear_errors();
