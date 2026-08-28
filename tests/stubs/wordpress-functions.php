@@ -250,3 +250,40 @@ if ( ! function_exists( 'wp_kses' ) ) {
 		return $content;
 	}
 }
+
+if ( ! function_exists( 'plugin_dir_path' ) ) {
+
+	/**
+	 * Get the filesystem directory path for a plugin file.
+	 *
+	 * @param string $file Plugin file path.
+	 * @return string
+	 */
+	function plugin_dir_path(
+		string $file
+	): string {
+
+		return rtrim(
+			dirname( $file ),
+			'/\\'
+		) . DIRECTORY_SEPARATOR;
+	}
+}
+
+if ( ! function_exists( 'plugin_dir_url' ) ) {
+
+	/**
+	 * Get the URL directory for a plugin file.
+	 *
+	 * @param string $file Plugin file path.
+	 * @return string
+	 */
+	function plugin_dir_url(
+		string $file
+	): string {
+
+		unset( $file );
+
+		return 'https://example.com/wp-content/plugins/shurloc-seo-tools/';
+	}
+}
