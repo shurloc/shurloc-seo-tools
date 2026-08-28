@@ -84,7 +84,7 @@ final class Shurloc_FAQ_Schema_Integration {
 			return;
 		}
 
-		global $post;
+		$post = get_post();
 
 		if ( ! $post instanceof WP_Post ) {
 			return;
