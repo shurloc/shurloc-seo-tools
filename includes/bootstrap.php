@@ -28,6 +28,21 @@ function shurloc_seo_tools_bootstrap(): void {
 	);
 
 	$autoloader->register();
+
+	/**
+	 * FAQ schema.
+	 */
+
+	$faq_schema_parser = new Shurloc_FAQ_Schema_Parser();
+
+	$faq_schema_generator = new Shurloc_FAQ_Schema_Generator();
+
+	$faq_schema_integration = new Shurloc_FAQ_Schema_Integration(
+		parser: $faq_schema_parser,
+		generator: $faq_schema_generator,
+	);
+
+	$faq_schema_integration->register();
 }
 
 add_action(
