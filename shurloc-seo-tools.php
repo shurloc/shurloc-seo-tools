@@ -3,7 +3,7 @@
  * Plugin Name:       Shur-loc SEO Tools
  * Plugin URI:        https://github.com/shurloc/shurloc-seo-tools
  * Description:       SEO tools for the Shur-loc website.
- * Version:           0.1.0
+ * Version:           0.1.1
  * Requires at least: 7.0
  * Requires PHP:      8.4
  * Requires Plugins:  shurloc-tools
